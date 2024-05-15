@@ -11,58 +11,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <div class="main-container">
-        <header class="header">
-            <a href="#">
-            <div class="box-header-img">
-                  <img src="images/logo/Booki.png" alt="logo-booki" class="header-img">
-            </div>
-            </a>
-            <div class="box-header-btn">
-                <button class="header-btn"><a href="#hebergement">Hébergements</a></button>
-                <button class="header-btn"><a href="#activites">Activités</a></button>
-            </div>            
-        </header>
-
+        <nav>
+            <header class="header">
+                <a href="#">
+                <div class="box-header-img">
+                    <img src="images/logo/Booki.png" alt="logo-booki" class="header-img">
+                </div>
+                </a>
+                <div class="box-header-btn">
+                    <a href="#hebergement" class="header-btn">Hébergements</a>
+                    <a href="#activites" class="header-btn">Activités</a>
+                </div>            
+            </header>
+        </nav>
         <main>
-
-            <form action="#" class="formulaire">  
+<div class="formulaire">
                 <div class="title-navigation"> <h1> Trouvez votre hébergement pour des vaccances de rêve</h1>
                  <p>En plein centre ville ou en pleine nature</p>
                 </div>
-                
-                 <div class="search-bar">
-                   <div class="search-logo">
-                     <i class="fa-solid fa-location-dot"></i> 
-                  </div>
+                <form action="#" class="search-bar">                   
+                        <div class="search-logo">
+                            <i class="fa-solid fa-location-dot"></i> 
+                        </div>
                    
-                   <input class="search-input" type="text" placeholder="Marseille, France">
+                         <input class="search-input" type="text" placeholder="Marseille, France">
 
-                   <button class="btn-rechercher">Rechercher</button>
-                   <button class="btn-type-phone"><i class="fa-solid fa-magnifying-glass"></i></button>
-                 </div>
-               
-                 <ul class="filter-ul">
-                     <li class="text-li">Filtre</li>
-               
+                        <button class="btn-rechercher">Rechercher</button>
+                        <button class="btn-type-phone"><i class="fa-solid fa-magnifying-glass"></i></button>               
+               </form>  
+<div class="content-list"> 
+<p class="text-li">Filter</p>
+               <ul class="filter-ul">               
                      <li class="filter-li"><i class="fa-solid fa-money-bill-wave"></i><a href="#">Economique</a></li>            
                      <li class="filter-li"><i class="fa-solid fa-person"></i><a href="#"> Famillial</a></li>
                      <li class="filter-li"><i class="fa-solid fa-heart"></i><a href="#">Romantique</a></li>
                      <li class="filter-li"><i class="fa-solid fa-fire"></i><a href="#">Nos pépites</a></li>
-   
-                 </ul>
+                </ul>
+</div>
+
+
+
                  <div class="box-inforamtion">
-                    <i class="fa-solid fa-circle-info"></i>
+                    <div class="content-i">
+                    <i class="fa-solid fa-info" style="color: #0065fc;"></i>
+                    </div>
                     <p> Plus de 500 logments sont disponibles dans cette ville</p>
                  </div>
                
-            </form>    
-
+          
+</div>
          
             <div class="hebergements-and-populaires">
                 <section class="hebergements" id="hebergement">
