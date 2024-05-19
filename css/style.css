@@ -181,7 +181,6 @@ a {
     border-radius: 0px 10px 10px 0px;
     border: none;
     background-color: #0065FC;  
-
 }
 
 .btn-type-phone i{
@@ -199,6 +198,7 @@ a {
     font-size: 20px;
     font-weight: 900; 
 }
+
 .filter-ul{
     display: flex;
     justify-content: start;
@@ -310,16 +310,16 @@ a {
 }
 
 .hebergement-cards{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5px;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
 }
 
+
 .hebergement-cards .card{
-    width: 240px;
-    height: 200px;
+    width: 100%;
+    height: 230px;
     transition: all 0.4s;
 }
 
@@ -473,27 +473,51 @@ a {
 /****** Media queries ***********/
 
 @media (max-width: 1360px) {
- 
     .content-activites{
         flex-wrap: nowrap;
         column-gap: 10px;
     }
 }
 
-@media (max-width: 1316px) {
-  
- 
+
+
+@media (max-width: 1170px) {
+    .content-activites{ 
+        column-gap: 10px;
+    } 
+    .activite-card{
+     width: 230px;
+     height: 380px;
+       
+    }    
+}
+
+
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+
+/*********** Formulaire **************/
+    .formulaire{
+        gap: 27px;
+    }
+    .title-navigation h1{
+        font-size: 22px;
+    }
+    .content-list{
+        gap: 10px;
+        align-items: start;
+        flex-direction: column;
+    }
     
-    .hebergement-cards{
-        display: grid;
-        grid-template-rows: repeat(2,1fr);
-        grid-template-columns: repeat(3,1fr);
-        column-gap: 20px;
-        row-gap: 20px;
-    }
-    .hebergement-cards .card{
+    .filter-ul{
         width: 100%;
+        font-size: 13px;
     }
+
+    .filter-li{ 
+        margin: 0px 25px 0px 0px;
+    }
+    
       /********** hebergement *********/
 
     .hebergements-and-populaires {
@@ -532,53 +556,6 @@ a {
     /********** populaire*********/
 
 
-
-    
-}
-
-@media (max-width: 1170px) {
-    .content-activites{ 
-        column-gap: 10px;
-    } 
-    .activite-card{
-     width: 230px;
-     height: 380px;
-       
-    }    
-}
-
-
-
-
-
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-
-/*********** Formulaire **************/
-    .formulaire{
-        gap: 27px;
-    }
-    .title-navigation h1{
-        font-size: 22px;
-    }
-    .content-list{
-        gap: 10px;
-        align-items: start;
-        flex-direction: column;
-    }
-    
-    .filter-ul{
-        width: 100%;
-        display: flex;
-        
-        font-size: 13px;
-    }
-
-    .filter-li{ 
-    }
-
-
-
     /********** activités*********/
     .activites{
         padding: 25px 0;
@@ -610,20 +587,6 @@ a {
     }
 }
 
-
-@media (max-width: 930px) {
-    .hebergement-cards{
-        justify-content: space-evenly;
-        column-gap: 20px;
-    }
-    
-    .hebergement-cards .card{
-        width: 180px;
-        height: 240px;
-    }    
-} 
-
-
 @media (max-width: 788px) {
     .content-activites{ 
         column-gap: 5px;
@@ -631,7 +594,15 @@ a {
     .activite-card{
         width: 180px;  
     }    
+
+    
+    .filter-li{ 
+        margin: 0px 15px 0px 0px;
+
+    }
 } 
+
+
 
 
 /* Small devices (phones, less than 768px) */
@@ -738,7 +709,6 @@ a {
         grid-template-columns: repeat(2, 1fr); 
         column-gap: 10px;
         row-gap: 15px;
-        margin-left: -20px;
     }
 
     .content-list  .filter-ul .filter-li{
@@ -828,14 +798,13 @@ a {
     
     .hebergement-cards{
         display: flex;
-        
         flex-direction: column;
         align-items: center;
     }
 
     .hebergement-cards a{
         width: 85%;
-        height: 250px;
+        height: 240px;
     }
 
   
