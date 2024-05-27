@@ -56,14 +56,16 @@ html{
     font-size: 16px;
     align-self: start;
     text-align: center;
+    padding-top: 10px;
     transition: all 0.2s;
 }
 
 
 
 .box-header-btn .header-btn:hover {
-   border-top: 4px solid var(--main-color);
+   border-top: 3px solid var(--main-color);
    color: var(--main-color);
+   color: #0065FC;
 }
 
 .box-header-btn .header-btn:focus {
@@ -443,12 +445,15 @@ a {
 
 /**** Footer******/
 .content-footer{
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
+    flex-wrap: nowrap;
+    justify-content: start;
+    column-gap: 250px;
     background-color: #F2F2F2;
-    flex-wrap: wrap;
     padding: 5px 25px;
 }
+
+
 
 .content-footer li{
     list-style-type: none;
@@ -471,8 +476,17 @@ a {
 
 @media (max-width: 1360px) {
     .content-activites{
-        flex-wrap: nowrap;
-        column-gap: 10px;
+       display: grid;
+       grid-template-columns: repeat(4,1fr);
+       gap: 20px;
+    }
+
+    .activite-card{
+        width: 100%;
+        font-size: 15px;
+    }
+    .content-footer{
+        gap: 200px;
     }
 }
 
@@ -480,9 +494,10 @@ a {
     .content-activites{ 
         column-gap: 10px;
     } 
+    
     .activite-card{
-     width: 230px;
-     height: 380px;  
+     height: 380px; 
+     font-size: 14px; 
     }    
 }
 
@@ -559,25 +574,46 @@ a {
         display: flex;
         justify-content: space-around; 
         flex-wrap: nowrap;
-        column-gap: 10px;
+        column-gap: 5px;
     }
+
+    .activite-card{
+        width: 185px;
+        height: 256px;
+        align-content: space-between;
     
+    }    
     
     .activite-card img{
         width: 100%;
         height: 79%;
     }
 
-
-    .activite-card{
-        width: 185px;
-        height: 256px;
-        align-content: space-between;
-       
-    }    
+    
     .activite-card h4{
         padding: 10px; 
-        font-size: 14px;
+    }
+
+    .content-footer{
+        gap: 150px;
+    }
+}
+
+@media (max-width: 920px){
+    .content-footer{
+        gap: 100px;
+    }
+}
+
+@media (max-width: 860px){
+  
+    .activite-card{
+        width: 160px;
+        height: 256px;
+    }    
+    
+    .content-footer{
+        gap: 60px;
     }
 }
 
@@ -585,9 +621,6 @@ a {
     .content-activites{ 
         column-gap: 5px;
     }  
-    .activite-card{
-        width: 180px;  
-    }    
     
     .filter-li{ 
         margin: 0px 15px 0px 0px;
@@ -638,7 +671,6 @@ a {
         border-top: 0px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
     }
-
 
     /****** formulaire *******/
 
@@ -765,7 +797,7 @@ a {
     }
 
     .populaires-cards img {
-        width: 20%;
+        width: 40%;
     }
     
     .populaires-cards  .card h3{
@@ -822,5 +854,82 @@ a {
         margin-top: 30px;
         padding: 20px;
     }
+}
+
+
+
+@media (max-width: 440px) {
+    .hebergements h2{
+        font-size: 20px;
+    }
+
+    .activites h3{
+        font-size: 20px;
+    }
+
+    .populaires-cards  .card h3{
+        font-size: 15px;
+    }
+    .populaires-cards  .card p{
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-width: 420px) {
+    /* ... */           
+  
+    .header .box-header-btn .header-btn{ 
+        font-size: 16px; 
+    }
+
+    /****** formulaire *******/
+
+    .formulaire h1 {
+        font-size: 18px;
+    }
+
+    .formulaire p{
+        font-size: 12px;
+    }
+    
+    /********** ul li *********/
+    .content-list   .filter-li{
+        font-size: 10px;
+    }
+
+    .box-inforamtion p{
+        font-size: 12px;
+    }
+
+    /********** populaires*********/
+
+    .populaires-cards a{
+        width: 90%;
+    }
+
+    .populaires-cards .card{
+        width: 100%;
+        margin-top: 20px;
+    }
+  
+    .populaires-cards  .card h3{
+        font-size: 15px;
+    }
+    .populaires-cards  .card p{
+        font-size: 12px;
+    }
+    /********** hebergements*********/   
+    
+    .hebergement-cards a{
+        width: 90%;
+        height: 200px;
+    }
+    /********** activités*********/
+   
+    .activite-card{
+        height: 200px;
+    }  
 }
 
